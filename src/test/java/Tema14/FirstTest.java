@@ -6,6 +6,17 @@ import org.junit.jupiter.api.Test;
 public class FirstTest {
 
     @Test
+    public void instantiateClass() {
+        FirstTest firstTest = new FirstTest();
+    }
+
+    @Test
+    public void callMethod() {
+        FirstTest firstTest = new FirstTest();
+        firstTest.
+    }
+
+    @Test
     public void fahrenheitToCelsius() {
         //Given
         //double celsius = 21;
@@ -13,7 +24,7 @@ public class FirstTest {
         FirstTest firstTest = new FirstTest();
 
         //When
-        double celsius = firstTest.celsius((fahrenheit - 32) * 5 / 9);
+        double celsius = firstTest.dcelsius((fahrenheit - 32) * 5 / 9);
 
         //Then
         Assertions.assertThat(celsius).isEqualTo(10);
