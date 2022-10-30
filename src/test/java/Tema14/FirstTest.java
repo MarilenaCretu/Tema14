@@ -1,6 +1,6 @@
 package Tema14;
 
-import org.junit.jupiter.api.Assertions;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class FirstTest {
@@ -16,7 +16,7 @@ public class FirstTest {
         double celsius = firstTest.celsius((fahrenheit - 32) * 5 / 9);
 
         //Then
-        Assertions.assertThat(celsius).isEquqlTo(10);
+        Assertions.assertThat(celsius).isEqualTo(10);
     }
     @Test
     public void celsiusToFahrenheit() {
@@ -29,7 +29,7 @@ public class FirstTest {
         double fahrenheit = Tema14.FirstTest.fahrenheit((celsius * 1.8) + 32);
 
         //Then
-        Assertions.assertThat(fahrenheit).isEquqlTo(50);
+        Assertions.assertThat(fahrenheit).isEqualTo(50);
     }
 
 }
