@@ -5,20 +5,6 @@ import org.junit.jupiter.api.Test;
 
 public class FirstTest {
 
-
-    @Test
-    public void celsiusToFahrenheit() {
-        //Given
-        double celsius = 21;
-      // double fahrenheit;
-        FirstTest firstTest = new FirstTest();
-
-        //When
-        double fahrenheit = Tema14.FirstTest.fahrenheit((celsius * 1.8) + 32);
-
-        //Then
-        Assertions.assertThat(fahrenheit).isEquqlTo(69.8);
-    }
     @Test
     public void fahrenheitToCelsius() {
         //Given
@@ -31,6 +17,19 @@ public class FirstTest {
 
         //Then
         Assertions.assertThat(celsius).isEquqlTo(10);
+    }
+    @Test
+    public void celsiusToFahrenheit() {
+        //Given
+        double celsius = 10;
+        // double fahrenheit;
+        FirstTest firstTest = new FirstTest();
+
+        //When
+        double fahrenheit = Tema14.FirstTest.fahrenheit((celsius * 1.8) + 32);
+
+        //Then
+        Assertions.assertThat(fahrenheit).isEquqlTo(50);
     }
 
 }
