@@ -1,11 +1,11 @@
-import java.util.Scanner;
+package Tema14;
 
 public class Main {
     public static void main(String[] args) {
 
-        Temperatura temperatura=new Temperatura();
 
-        temperatura.getTemperaturaCelsius();
-        temperatura.getTemperaturaFahrenheit();
+        System.out.println(Temperatura.fahrenheitToCelsius());
+        System.out.println(Temperatura.celsiusToFahrenheit());
+
     }
 }
