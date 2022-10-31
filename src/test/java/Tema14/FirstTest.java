@@ -3,41 +3,45 @@ package Tema14;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+
 public class FirstTest {
 
     @Test
     public void instantiateClass() {
-        FirstTest firstTest = new FirstTest();
+        Temperatura temperatura = new Temperatura();
     }
 
     @Test
-    public void callMethod() {
-        FirstTest firstTest = new FirstTest();
-        firstTest.
+    public void callMethodToCelsius() {
+        Temperatura temperatura = new Temperatura();
+        temperatura.fahrenheitToCelsius(100);
+    }
+    @Test
+    public void callMethodToFahrenheit() {
+        Temperatura temperatura = new Temperatura();
+        temperatura.celsiusToFahrenheit(22);
     }
 
     @Test
     public void fahrenheitToCelsius() {
         //Given
-        //double celsius = 21;
-         double fahrenheit=50;
-        FirstTest firstTest = new FirstTest();
+         double fahrenheit=0;
+        Temperatura temperatura = new Temperatura();
 
         //When
-        double celsius = firstTest.dcelsius((fahrenheit - 32) * 5 / 9);
+        double celsius = temperatura.fahrenheitToCelsius(0);
 
         //Then
-        Assertions.assertThat(celsius).isEqualTo(10);
+        Assertions.assertThat(celsius).isEqualTo(-17.77777777777778);
     }
     @Test
     public void celsiusToFahrenheit() {
         //Given
         double celsius = 10;
-        // double fahrenheit;
-        FirstTest firstTest = new FirstTest();
+        Temperatura temperatura = new Temperatura();
 
         //When
-        double fahrenheit = Tema14.FirstTest.fahrenheit((celsius * 1.8) + 32);
+        double fahrenheit = temperatura.celsiusToFahrenheit(10);
 
         //Then
         Assertions.assertThat(fahrenheit).isEqualTo(50);
